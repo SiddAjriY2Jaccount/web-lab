@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="student.css"?>
+<students>
+	<student>
+	<name>Shubham</name>
+	<college>PESIT</college>
+	<usn>001</usn>
+	<branch>CSE</branch>
+	<year_of_joining>2016</year_of_joining>
+	</student>
+	<student>
+	<name>Sourabh</name>
+	<college>PESIT</college>
+	<usn>002</usn>
+	<branch>CSE</branch>
+	<year_of_joining>2014</year_of_joining>
+	</student>
+	<student>
+	<name>Agarwal</name>
+	<college>PESIT</college>
+	<usn>003</usn>
+	<branch>CSE</branch>
+	<year_of_joining>2018</year_of_joining>
+	</student>
+</students>
+

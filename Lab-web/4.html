@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Functions</title>
+<style>
+  .tb
+  {
+        padding: 4px 22px 4px 4px;
+        border:1px solid hotpink;
+        width:230px;
+        height:20px;
+        font:10pt verdana;
+  }
+</style>
+</head>
+<body>
+  <h1 style="color: blue;">JavaScript program to: </h1>
+  <h2 style="color: orange;">
+    <ul>
+      <li>Find Position in the String of the Left-Most Vowel (OR)</li>
+      <li>Print Given Number in Reverse Order</li>
+    </ul>
+  </h2>
+
+  <hr>
+  <br>
+  <center>
+  <p style="font-size: 14pt;">
+    <b>Enter String/Number: </b>
+    <input class="tb" type="text" id="str" onblur="evalinput(this.value);"/>
+  </p>
+  <br>
+  <h2 style="color: red;">Result: </h2>
+  <div id="result"></div>
+  <script>
+  function evalinput(str)
+  { if (Number.isInteger(parseInt(str)))
+    { var num = parseInt(str);
+      var rev = 0, rem = 0;
+      while (num > 0)
+      { rem = parseInt(num % 10);
+        rev = rev * 10 + rem;
+        num = parseInt(num / 10);
+      }
+      document.getElementById("result").innerHTML = "<h3>Reverse of " + str + " is " + rev + "</h3>";
+    }
+
+    else
+    {
+		var chr = "";
+
+
+		str = str.toUpperCase();
+
+		for(var i = 0; i < str.length; i++)
+		{
+			chr = str.charAt(i);
+
+			if(chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+				break;
+		}
+
+		if( i < str.length )
+      document.getElementById("result").innerHTML = "<h3>The position of the left most vowel is " +(i+1)+ " <br></h3>";
+		else
+			document.getElementById("result").innerHTML = "<h3>NO Vowel found in entered string <br></h3>";
+
+
+
+    }
+  }
+  </script>
+  </center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style>
+  #pp
+  {
+    color: red;
+    font-size: "20px";
+    bgcolor: pink;
+  }
+</style>
+
+<body>
+  <h1 style="color: hotpink;">JAVACRIPT PROGRAM TO a) find leftmost vowel b) find reverse of a number </h1>
+
+  <p id="pp">'Enter your num or str here'</p>
+  <input type="text" id="str" onblur="fun(this.value);" />
+
+<script>
+  <center>
+    <div id="result1"> </div>
+  </center>
+  function fun(str)
+  {
+    if (Number.isInteger(parseInt(str)))
+    {
+      var num = parseInt(str);
+      var rev=0;
+      var num1 = 0;
+      while(num>0)
+      {
+        num1 = parseInt(num%10);
+        rev = rev*10 + num1;
+        num = parseInt(num/10);
+      }
+
+
+
+      document.getElementByID("result1").innerHTML = "<h3>Reverse of " + str + " is " + rev + "</h3>";
+    }
+
+    else
+    {
+      for(var i = 0; i < str.length; i++)
+      {
+        str = str.toUpperCase()
+        var chr = str.charAt(i);
+        if(chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+  				break;
+      }
+
+      if (i<str.length)
+      {
+        document.getElementByID("result1").innerHTML = "<p>Position of Vowel is" + (i+1) +"</p>";
+      }
+
+      else
+      {
+        document.getElementByID("result1").innerHTML = "<p>NOSUCHVOWEL</p>";
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

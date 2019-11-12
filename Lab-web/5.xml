@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="5.xsl" ?>
+<student>
+    <info>
+        <usn>1PE18cs111</usn>
+        <name>YOOOOOOOO</name>
+        <coll>PESIT</coll>
+        <branch>CSE</branch>
+        <yoj>2019</yoj>
+        <email>momomomom@gmail.com</email>
+    </info>
+</student>
